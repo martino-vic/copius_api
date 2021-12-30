@@ -9,5 +9,5 @@ jobs:
       name: win/default
     steps:
       - run:
-         command: echo hello & echo world
+         command: cd C:\Users\Viktor\OneDrive\Git\copius\tests
          shell: cmd.exe
