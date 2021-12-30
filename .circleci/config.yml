@@ -1,4 +1,4 @@
-#version: 2.1 # Use version 2.1 to enable orb usage.
+version: 2.1 # Use version 2.1 to enable orb usage.
  
 orbs:
   python: circleci/python@0.3.2
