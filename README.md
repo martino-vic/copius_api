@@ -1,4 +1,4 @@
-[![DOI](https://zenodo.org/badge/428920599.svg)](https://zenodo.org/badge/latestdoi/428920599)
+[![DOI](https://zenodo.org/badge/428920599.svg)](https://zenodo.org/badge/latestdoi/428920599) [![CircleCI](https://circleci.com/gh/martino-vic/copius_api/tree/master.svg?style=svg)](https://circleci.com/gh/martino-vic/copius_api/tree/master)
 
 # copius_api
 This is a Python-api to the transcription and orthography toolset at https://copius.eu/ortho.php:  
