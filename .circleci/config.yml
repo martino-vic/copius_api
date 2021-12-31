@@ -9,10 +9,15 @@ jobs:
       shell: powershell.exe
     steps:
       - checkout
-      - run: systeminfo
       - run:
-          name: "Check docker"
-          shell: powershell.exe
-          command: |
-            docker info
-            docker run hello-world:nanoserver-1809
+          name: "Install Python"
+          command: choco install python --version=3.7.9
+          
+      - run:
+          name: "Install Deps"
+          command: pip install --user -r requirements.txt
+          
+      - run:
+          name: "python/test"
+          command: python -m unittest discover -v
+
