@@ -1,21 +1,18 @@
-build-and-test-cov-win:
-    #environment: PYTHONPATH=./tmp
-    
-    #executor: win/default # executor type
+version: 2.1
+orbs:
+  win: circleci/windows@2.2.0
+
+jobs:
+  build:
     executor:
       name: win/default
       shell: powershell.exe
     steps:
-
       - checkout
+      - run: systeminfo
       - run:
-          name: "Install Python"
-          command: choco install python --version=3.7.9
-      #- python/install-deps
-      - run:
-          name: "Install Deps"
-          command: pip install --user -r requirements.txt
-          
-      - run:
-          name: "python/test"
-          command: python -m unittest discover -v
+          name: "Check docker"
+          shell: powershell.exe
+          command: |
+            docker info
+            docker run hello-world:nanoserver-1809
