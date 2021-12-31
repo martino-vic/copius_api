@@ -1,4 +1,4 @@
-from copius import api
+from copius_api import api
 import unittest
 
 class Test1(unittest.TestCase):
