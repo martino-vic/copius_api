@@ -16,7 +16,7 @@ How to install:
 
 ::
 
-   >>> pip install copius_api
+   $ pip install copius_api
 
 How to use:
 
