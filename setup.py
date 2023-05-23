@@ -17,6 +17,10 @@ setup(
   "test": ["pytest>=7.1.2"],
   "dev": ["wheel", "twine", "sphinx"]
   },
+  install_requires=[
+          'requests',
+          'beautifulsoup4',
+      ],
   keywords=['linguistics', 'transcription'],
   classifiers=[
     'Development Status :: 3 - Alpha',
@@ -34,11 +38,11 @@ setup(
 
   ],
   url='https://github.com/martino-vic/copius_api',
-  download_url='https://github.com/martino-vic/copius_api/archive/1.4.1.tar.gz',
+  download_url='https://github.com/martino-vic/copius_api/archive/refs/tags/v1.4.1.tar.gz',
   license='MIT',
   platforms=["Linux"],
   python_requires=">=3.7",
   project_urls={
-  "continuous integration": "https://dl.circleci.com/status-badge/redirect/gh/LoanpyDataHub/loanpy/tree/main",
+  "continuous integration": "https://app.circleci.com/pipelines/github/martino-vic/copius_api?branch=master",
   }
 )
