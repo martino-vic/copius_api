@@ -12,10 +12,7 @@ jobs:
           command: |
             git clone https://github.com/martino-vic/copius_api.git
             pip install -e copius_api
-      - run:
-          name: "Install Deps"
-          command: pip install --user -r requirements.txt
-          
+
       - run:
           name: "python/test"
           command: python -m unittest discover -v
@@ -24,4 +21,3 @@ workflows:
   main:
     jobs:
       - build
-      
