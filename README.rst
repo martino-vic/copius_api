@@ -12,6 +12,12 @@ and transliterations you might encounter when working with Uralic
 languages and other languages of Europe and Northern Asia that use
 variants of the Latin or Cyrillic alphabet.” (Copyright © 2021 COPIUS)
 
+How to install:
+
+::
+
+   >>> pip install copius_api
+
 How to use:
 
 ::
