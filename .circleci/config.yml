@@ -1,18 +1,15 @@
 version: 2.1
+
 orbs:
-  win: circleci/windows@2.2.0
+  python: circleci/python@0.3.2
 
 jobs:
   build:
-    executor:
-      name: win/default
-      shell: powershell.exe
+    executor: python/default
     steps:
-      - checkout
       - run:
-          name: "Install Python"
-          command: choco install python --version=3.10.0
-          
+          name: Clone repo
+          command: git clone https://github.com/martino-vic/copius_api.git
       - run:
           name: "Install Deps"
           command: pip install --user -r requirements.txt
@@ -21,3 +18,8 @@ jobs:
           name: "python/test"
           command: python -m unittest discover -v
 
+workflows:
+  main:
+    jobs:
+      - build
+      
